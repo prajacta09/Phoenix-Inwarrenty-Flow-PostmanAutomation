@@ -33,6 +33,7 @@ on:
                -r cli,htmlextra
 
         - name: Newman Report
+          if: always()
           uses: actions/upload-artifact@v6.0.0
           with: 
             name: Newman Report 
