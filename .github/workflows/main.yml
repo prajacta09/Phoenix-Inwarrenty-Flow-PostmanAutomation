@@ -1,12 +1,12 @@
 name: Postman Collection Workflow
 
- on:  
-  push:
-    branches: [main]
+on:  
+ push:
+   branches: [main]
   workflow_dispatch: 
   schedule:
     - cron : 30 02 * * *
-    - cron : 00 14 * * *
+    - cron : 00 14 * * *s
     - cron : 00 06 * * 1-5
 
   jobs:
