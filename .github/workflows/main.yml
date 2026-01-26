@@ -1,4 +1,4 @@
-name : Postman Collection Workflow
+name: Postman Collection Workflow
 
  on:  
   push:
@@ -31,6 +31,12 @@ name : Postman Collection Workflow
                -e QA Env.postman_environment.json \
                -d testdata.csv \
                -r cli,htmlextra
+
+        - name: Newman Report
+          uses: actions/upload-artifact@v6.0.0
+          with: 
+            name: Newman Report 
+            path: newman/*.html
 
 
                
