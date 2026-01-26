@@ -1,19 +1,18 @@
 name: Postman Collection Workflow
 
-on:  
- push:
-   branches: [main]
+on:
+  push:
+    branches: [main]
   workflow_dispatch: 
   schedule:
-    - cron : 30 02 * * *
-    - cron : 00 14 * * *s
-    - cron : 00 06 * * 1-5
+    - cron: '30 02 * * *'
+    - cron: '00 14 * * *'
+    - cron: '00 06 * * 1-5'
 
-  jobs:
-    run-postman-tests: 
-      runs-on: ubuntu-latest
-
-      steps: 
+jobs:
+  run-postman-tests: 
+    runs-on: ubuntu-latest
+    steps: 
         - name: Checkout the code
           uses: actions/checkout@v6.0.2
 
@@ -39,10 +38,3 @@ on:
             name: Newman Report 
             path: newman/*.html
 
-
-               
-
-
-               
-        
-          
