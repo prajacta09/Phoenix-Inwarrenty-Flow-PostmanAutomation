@@ -7,7 +7,7 @@ on:
   schedule:
     - cron: '30 02 * * *'
     - cron: '00 14 * * *'
-    - cron: '00 06 * * 1-5'
+    - cron: '00 06 * * 1-1'
 
 jobs:
   run-postman-tests: 
